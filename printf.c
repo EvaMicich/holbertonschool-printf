@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			char_count = char_count + _strlen(args[i]);
-			format[i + 1];
 		}
 
 		j = 0;
