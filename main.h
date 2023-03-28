@@ -8,7 +8,7 @@
 typedef struct check
 {
 	char *op;
-	void(*f)(va_list args);
+	void(*f)(char *);
 } check_t;
 
 int _printf(const char *format, ...);
