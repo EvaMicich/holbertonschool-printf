@@ -11,13 +11,13 @@ int main(void)
 {
 	int len;
 	int len2;
-	unsigned int ui;
-	void *addr;
+/*	unsigned int ui;
+	void *addr;*/
 
 	len = _printf("Let's try to printf a simple sentence.\n"); /*test the counter of _printf*/
 	len2 = printf("Let's try to printf a simple sentence.\n"); /* test counter of real printf*/
-	ui = (unsigned int)INT_MAX + 1024;
-	addr = (void *)0x7ffe637541f0;
+/*	ui = (unsigned int)INT_MAX + 1024; 
+	addr = (void *)0x7ffe637541f0; */
 /*	_printf("Length:[%d, %i]\n", len, len); wont work yet, need to handle %d/i in code*/
 	printf("Length:[%d, %i]\n", len2, len2); /*prints the length measured by real printf*/
 	printf("Length:[%d, %i]\n", len, len); /*prints the length measured by _printf*/
