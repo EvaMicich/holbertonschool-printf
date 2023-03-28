@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	check_t check[] = {
-		{"c", print_str},
+		{"c", print_char},
 		{"s", print_str},
 		{NULL, NULL}
 };
