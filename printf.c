@@ -36,16 +36,15 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			char_count = char_count + _strlen(args[i]);
-		}
-
-		j = 0;
-		while (check[j] != NULL)
-		{
-			if (*check[j].op == format[i + 1])
+			j = 0;
+			while (check[j] != NULL)
 			{
-				(check[j].f)(args);
+				if (*check[j].op == format[i + 1])
+				{
+					(check[j].f)(args);
+				}
+				j = j + 1;
 			}
-			j = j + 1;
 			i = i + 2;
 		}
 		_putchar(format[i]);
