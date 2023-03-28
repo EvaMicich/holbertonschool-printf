@@ -35,13 +35,13 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			char_count = char_count + _strlen(args[i]);
+			char_count = char_count + _strlen(va_arg(args, char *));
 			j = 0;
-			while (check[j] != NULL)
+			while (check[j].op != NULL)
 			{
 				if (*check[j].op == format[i + 1])
 				{
-					(check[j].f)(args);
+					(check[j].f)(va_arg(args, char *));
 				}
 				j = j + 1;
 			}
