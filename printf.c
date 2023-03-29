@@ -42,6 +42,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				char_count = char_count + _putchar(format[i]);
+				i = i + 2;
 			}
 			j = 0;
 			while (check[j].sp != NULL)
@@ -52,11 +53,19 @@ int _printf(const char *format, ...)
 				}
 				j = j + 1;
 			}
-			if (format[i + 1] == '\0' || format[i + 2] == '\0')
+			if (check[j].sp == NULL)
+			{
+				char_count = char_count + _putchar(format[i]);
+				i = i + 1;
+			}
+			else if (format[i + 2] == '\0')
 			{
 				return (char_count);
 			}
-			i = i + 2;
+			else
+			{
+				i = i + 2;
+			}
 		}
 	}
 	va_end(args);
