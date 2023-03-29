@@ -39,6 +39,11 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i + 1] == '%')
+			{
+				return (char_count);
+				i = i + 2;
+			}
 			j = 0;
 			while (check[j].sp != NULL)
 			{
