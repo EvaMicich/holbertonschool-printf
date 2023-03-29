@@ -1,10 +1,11 @@
-#include <stdio.h>
 #include "main.h"
+#include <stddef.h>
+#include <stdarg.h>
 
 /**
  *print_str - prints a string, followed by a newline to stdout
- *@str: - char array string as input
- *Return: void
+ *@args: va_list input
+ *Return: character count
  */
 
 int print_str(va_list args)

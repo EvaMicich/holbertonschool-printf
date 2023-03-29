@@ -4,11 +4,16 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
+/**
+ *struct check - struct used to match user inoput with function
+ *@sp: the specifier
+ *@f: associated function
+ */
 
 typedef struct check
 {
 	char *sp;
-	int(*f)(va_list);
+	int (*f)(va_list);
 } check_t;
 
 int _printf(const char *format, ...);
