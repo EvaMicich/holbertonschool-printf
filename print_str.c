@@ -7,12 +7,21 @@
  *Return: void
  */
 
-void print_str(char *str)
+int print_str(va_list args)
 {
-	while (*str != '\0')
+	char *str;
+	int i;
+
+	i = 0;
+	str = va_arg(args, char *);
+	if (str == NULL)
 	{
-		_putchar(*str);
-		str = str + 1;
+		return (0);
 	}
-	_putchar('\n');
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i = i + 1;
+	}
+	return (i);
 }

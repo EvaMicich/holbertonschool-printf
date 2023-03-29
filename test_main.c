@@ -25,6 +25,10 @@ int main(void)
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
+	_printf("%s%c\n", "I am a string !", 'H');
+	printf("%s%c\n", "I am a string !", 'H');
+	_printf("%s", "I am a string ! a fabulous string");
+	printf("%s", "I am a string ! a fabulous string");
 /*	len = _printf("Percent:[%%]\n"); edge cases
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);

@@ -7,13 +7,14 @@
 
 typedef struct check
 {
-	char *op;
-	void(*f)(char *);
+	char *sp;
+	int(*f)(va_list);
 } check_t;
 
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _putchar(char c);
-void print_str(char *str);
+int print_str(va_list args);
+int print_char(va_list args);
 
 #endif /* _MAIN_H_ */

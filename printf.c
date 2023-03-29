@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stddef.h>
-
+#include <stdio.h>
 /**
- *printf - produces output according to a format
+ *_printf - produces output according to a format
  *@format: pointer to format specifier
  *Return: char_count, the number of character printed
  */
@@ -15,8 +15,7 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_str},
 		{NULL, NULL}
-};
-
+	};
 	int i;
 	int j;
 	int char_count;
@@ -34,13 +33,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			char_count = char_count + _strlen(va_arg(args, char *));
 			j = 0;
-			while (check[j].op != NULL)
+			while (check[j].sp != NULL)
 			{
-				if (*check[j].op == format[i + 1])
+				if (*check[j].sp == format[i + 1])
 				{
-					(check[j].f)(va_arg(args, char *));
+					char_count = char_count + (check[j].f)(args);
 				}
 				j = j + 1;
 			}
