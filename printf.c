@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	check_t check[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{'%', '%'};
 		{NULL, NULL}
 	};
 	int i;
@@ -29,8 +30,10 @@ int _printf(const char *format, ...)
 	i = 0;
 	char_count = 0;
 
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format[i] != '%')
 	{
+		_putchar(format[i]);
+		char_count = char_count + 1;
 		if (format[i] == '%')
 		{
 			j = 0;
@@ -44,9 +47,8 @@ int _printf(const char *format, ...)
 			}
 			i = i + 2;
 		}
-		_putchar(format[i]);
 		i = i + 1;
-		char_count = char_count + 1;
 	}
+	va_end(args);
 	return (char_count);
 }
