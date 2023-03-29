@@ -42,7 +42,6 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				char_count = char_count + _putchar(format[i]);
-				i = i + 1;
 			}
 			j = 0;
 			while (check[j].sp != NULL)
