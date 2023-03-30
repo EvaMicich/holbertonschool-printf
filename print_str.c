@@ -12,11 +12,18 @@ int print_str(va_list args)
 {
 	char *str;
 	int i;
+	char *error_msg;
 
 	i = 0;
+	error_msg = "(null)";
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
+		while (error_msg[i] != '\0')
+		{
+			_putchar(error_msg[i]);
+			i = i + 1;
+		}
 		return (0);
 	}
 	while (str[i] != '\0')
