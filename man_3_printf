@@ -1,0 +1,38 @@
+_PRINTF		Holberton Programmer's Manual			_PRINTF
+
+NAME
+	_printf - fomratted output conversion
+
+SYNOPSIS
+	#INCLUDE <stdio.h>
+
+	int _printf(const char *format, ...);
+
+DESCRIPTION
+	The function _printf produce output according to the format below. The \
+	function _printf write output to stdout, the standard output stream.   \
+
+   Flag characters
+     Flag charcters are not implemented in this version of _printf
+
+   Field width
+     Field width is not implemented in this version of _printf
+
+   Precision
+     Precision is not implemented in this version of _printf
+
+   Length modifiers
+     Length modifiers not implemented in this version of _printf
+
+   Conversion specifiers
+     A character that specifies the type of conersion to be applied.
+     The conversion specifiers and their meanings are
+
+     c
+     d
+     i
+     s
+
+RETURN VALUE
+
+ATTRIBUTES
