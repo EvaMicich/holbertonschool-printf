@@ -7,6 +7,8 @@ int valid_specifier(va_list args, char test_sp, int *count)
 	check_t check[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{"d", print_dec},
+		{"i", print_int},
 		{"%", print_percent},
 		{NULL, NULL}
 	};
