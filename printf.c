@@ -17,7 +17,6 @@ int valid_specifier(va_list args, char test_sp, int *count)
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_percent},
-		/*{"\0", null_term},*/
 		{NULL, NULL}
 	};
 	int j;
