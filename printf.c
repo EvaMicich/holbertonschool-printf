@@ -2,6 +2,14 @@
 #include <stddef.h>
 #include <stdio.h>
 
+/**
+ *valid_specifier - checks validity of specifier against list
+ *@args: va_list
+ *@test_sp: specifier to check against
+ *@count: character counter
+ *Return: 0 on fail, 1 on success
+ */
+
 int valid_specifier(va_list args, char test_sp, int *count)
 {
 	check_t check[] = {
