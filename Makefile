@@ -1,7 +1,7 @@
 CC = 	gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format
 RM = rm -rf
-SRC = main.c printf.c print_char.c print_int.c print_percent.c print_str.c _putchar.c _strlen.c
+SRC = main.c printf.c print_char.c print_int.c print_percent.c print_str.c _putchar.c _strlen.c valid_specifier.c
 NAME = printf
 
 all: 	1

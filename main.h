@@ -19,6 +19,7 @@ typedef struct check
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _putchar(char c);
+int valid_specifier(va_list args, char test_sp, int *count);
 int print_str(va_list args);
 int print_int(va_list args);
 int print_dec(va_list args);
