@@ -13,25 +13,25 @@
 
 int valid_specifier(va_list args, char test_sp, int *count)
 {
-        check_t check[] = {
-                {"c", print_char},
-                {"s", print_str},
-                {"d", print_int},
-                {"i", print_int},
-                {"%", print_percent},
-                {NULL, NULL}
-        };
-        int j;
+	check_t check[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int},
+		{"%", print_percent},
+		{NULL, NULL}
+	};
+	int j;
 
-        j = 0;
-        while (check[j].sp != NULL)
-        {
-                if (*check[j].sp == test_sp)
-                {
-                        *count = *count + (check[j].f)(args);
-                        return (1);
-                }
-                j = j + 1;
-        }
-        return (0);
+	j = 0;
+	while (check[j].sp != NULL)
+	{
+		if (*check[j].sp == test_sp)
+		{
+			*count = *count + (check[j].f)(args);
+			return (1);
+		}
+		j = j + 1;
+	}
+	return (0);
 }
