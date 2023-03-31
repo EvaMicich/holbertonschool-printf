@@ -1,0 +1,58 @@
+_PRINTF			Holberton Programmer's Manual			_PRINTF
+
+NAME
+	_printf - fomratted output conversion
+
+SYNOPSIS
+	#INCLUDE "main.h"
+	#INCLUDE <stdio.h>
+	#INCLUDE <stddef.h>
+	#INCLUDE <string.h>
+
+	int _printf(const char *format, ...);
+
+DESCRIPTION
+	The function _printf produces output according to format. The \
+	function _printf write output to stdout, the standard output stream.\
+	The format string is a character string that contains text and the \
+	format specifiers, which are replaced by values from the arguments \
+	passed to the function.
+
+   Format specifiers
+
+      %c print a single character
+
+      %s print a string of characters
+
+      %i print an integer
+
+      %d print an integer in decimal(base 10) format
+
+RETURN VALUE
+       The _printf function returns number of characters printed.
+
+EXAMPLES
+	The following code will print "Hello, world!" to stdout.
+
+	    	       _printf("Hello, %s!", "world");
+
+	The following code will print "The value is 42." to stdout.
+
+	    	      _printf("The value is %d.", 42);
+
+ATTRIBUTES
+
+   Flag characters
+     Flag charcters are not implemented in this version of _printf
+
+   Field width
+     Field width is not implemented in this version of _printf
+
+   Precision
+     Precision is not implemented in this version of _printf
+
+   Length modifiers
+     Length modifiers not implemented in this version of _printf
+
+SEE ALSO
+    printf(3)
