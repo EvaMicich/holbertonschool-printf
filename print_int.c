@@ -10,16 +10,21 @@
  */
 int print_int(va_list args)
 {
-	int num;
+	long int num;
 	char str[20];
-	int i;
-	int j;
-	int count;
+	long int i;
+	long int j;
+	long int count;
 
 	num = va_arg(args, int);
 	i = 0;
 	j = 0;
 	count = 0;
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	if (num < 0)
 	{
 		_putchar('-');
