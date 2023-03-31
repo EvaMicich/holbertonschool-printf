@@ -24,7 +24,7 @@ int print_str(va_list args)
 			_putchar(error_msg[i]);
 			i = i + 1;
 		}
-		return (0);
+		return (6);
 	}
 	while (str[i] != '\0')
 	{
