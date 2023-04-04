@@ -43,7 +43,7 @@ ATTRIBUTES
 
 LIMITATIONS
 
-	Flag charcters, field widthe, precision and lenght modifiers  are not implemented in this version of _printf
+	Flag charcters, field width, precision and lenght modifiers  are not implemented in this version of _printf
 
 SEE ALSO
     man printf(3)
